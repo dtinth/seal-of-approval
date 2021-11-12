@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo '{"name":"🦭🦭🦭🦭🦭","head_sha":"${{ github.sha }}","status":"completed","conclusion":"success","output":{"title":"🦭🦭","summary":"🦭"}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
+          gh api -X POST '/repos/${{ github.repository }}/statuses/${{ github.sha }}' -f state=success -f description='You can now merge this pull request!' -f context=seal-of-approval
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
