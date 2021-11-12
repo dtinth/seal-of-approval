@@ -8,4 +8,8 @@ Once all of the requirements are met, add this to your GitHub Actions workflow:
       - uses: dtinth/seal-of-approval@v1
 ```
 
-A seal of approval would be added to the PR under the checks section.
+A seal of approval would be added to the PR under the checks section. It looks like this:
+
+![image](https://user-images.githubusercontent.com/193136/141515134-79215e62-d56a-4d74-8313-c621ef4c0178.png)
+
+Click on the _Details_ link to [see the seal of approval](https://github.com/dtinth/seal-of-approval/runs/4193009969).
