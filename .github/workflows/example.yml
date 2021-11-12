@@ -1,0 +1,8 @@
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh api -X POST '/repos/{owner}/{repo}/statuses/${{ github.sha }}' -f state=success -f description='Hi' -f context=🦭
