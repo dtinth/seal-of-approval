@@ -1,4 +1,4 @@
-name: 🦭
+name: seal
 on:
   push:
 jobs:
@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo '{"name":"🦭🦭🦭🦭🦭","head_sha":"${{ github.sha }}","status":"completed","conclusion":"success","output":{"title":"🦭🦭","summary":"🦭"}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
+          echo '{"name":"🦭","head_sha":"${{ github.sha }}","status":"completed","conclusion":"success","output":{"title":"You can now merge this branch!","summary":"Seal of approval."}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
