@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo '{"name":"🦭","head_sha":"${{ github.event.pull_request.head.sha }}","status":"completed","conclusion":"success","output":{"title":"You can now merge this branch!","summary":"Seal of approval."}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
+          echo '{"name":"🦭","head_sha":"${{ github.event.pull_request.head.sha }}","status":"completed","conclusion":"success","output":{"title":"You can now merge this branch!","summary":"Yay","images":[{"alt":"🦭","image_url":"https://raw.githubusercontent.com/twitter/twemoji/793a6a93f303c08877dd6eb589b2fabb3d1c45ee/assets/svg/1f9ad.svg","caption":"Seal of approval"}]}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
