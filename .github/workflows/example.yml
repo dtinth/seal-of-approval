@@ -6,3 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: gh api -X POST '/repos/{owner}/{repo}/statuses/${{ github.sha }}' -f state=success -f description='Hi' -f context=🦭
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
