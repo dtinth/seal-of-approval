@@ -6,7 +6,5 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo '{"name":"🦭","head_sha":"${{ github.event.pull_request.head.sha }}","status":"completed","conclusion":"success","output":{"title":"You can now merge this branch!","summary":"\u00a0","images":[{"alt":"🦭","image_url":"https://source.unsplash.com/768x768/?seal","caption":"Seal of approval"}]}}' | gh api -X POST '/repos/${{ github.repository }}/check-runs' --input -
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - uses: ./
