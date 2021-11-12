@@ -1,4 +1,4 @@
-name: "Pull Request Seal of Approval"
+name: "Pull Request Seal of Approval 🦭"
 description: "Tells the developer that they may click the green “Merge pull request” button"
 inputs: {}
 outputs: {}
