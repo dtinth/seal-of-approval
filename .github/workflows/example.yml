@@ -6,6 +6,6 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - run: gh api -X POST '/repos/${{ github.repository }}/check-runs' -f name=🦭 -f head_sha=${{ github.sha }} -f status=success -f conclusion=success
+      - run: gh api -X POST '/repos/${{ github.repository }}/check-runs' -f name=🦭 -f head_sha=${{ github.sha }} -f status=completed -f conclusion=success
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
