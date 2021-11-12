@@ -8,4 +8,4 @@ Once all of the requirements are met, add this to your GitHub Actions workflow:
       - uses: dtinth/seal-of-approval@v1
 ```
 
-A seal of approval would be added to the PR under the checks section.
+A seal of approval would be added to the PR under the checks section. It looks like this:
